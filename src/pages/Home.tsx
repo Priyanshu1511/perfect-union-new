@@ -117,12 +117,13 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
 
           <div className="text-center mt-16">
-            <button
-              onClick={() => onNavigate('products')}
-              className="bg-slate-900 text-white px-8 py-3 text-base font-medium tracking-wide hover:bg-slate-800 transition-colors duration-200 shadow-md hover:shadow-lg"
-            >
-              View All Products
-            </button>
+          <button
+  onClick={() => onNavigate('products')}
+  className="bg-slate-900 text-white px-8 py-2.5 text-base font-medium tracking-wide rounded-md hover:bg-slate-800 transition-colors duration-200 shadow-md hover:shadow-lg"
+>
+  View All Products
+</button>
+
           </div>
         </div>
       </section>
@@ -136,11 +137,12 @@ export default function Home({ onNavigate }: HomeProps) {
             Get a personalized quote tailored to your business needs. Our experts are standing by.
           </p>
           <button
-            onClick={() => onNavigate('contact')}
-            className="bg-white text-slate-900 px-10 py-4 text-lg font-medium tracking-wide hover:bg-gray-100 transition-all duration-300"
-          >
-            Contact Us Today
-          </button>
+  onClick={() => onNavigate('contact')}
+  className="bg-white text-slate-900 px-7 py-2.5 text-base font-medium tracking-wide rounded-md hover:bg-gray-100 transition-all duration-200"
+>
+  Contact Us Today
+</button>
+
         </div>
       </section>
     </div>

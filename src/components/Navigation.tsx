@@ -1,12 +1,17 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 
 interface NavigationProps {
   currentPage: string;
   onNavigate: (page: string) => void;
+  onOpenChat: () => void; // ✅ added
 }
 
-export default function Navigation({ currentPage, onNavigate }: NavigationProps) {
+export default function Navigation({
+  currentPage,
+  onNavigate,
+  onOpenChat, // ✅ added
+}: NavigationProps) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const navItems = [
@@ -34,7 +39,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
           {/* Logo */}
           <button onClick={handleHomeClick} className="flex items-center">
             <img
-              src="./logo3.jpg"
+              src="./logo3.png"
               alt="Perfect Union Insurance Agency LLC"
               className="h-14 w-auto object-contain"
             />
@@ -57,14 +62,32 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
+          {/* Desktop Right Section */}
+          <div className="hidden md:flex items-center space-x-6">
+
+            {/* Phone */}
+            <div className="flex items-center space-x-2 text-slate-700 text-sm font-medium">
+              <Phone size={18} />
+              <span>(463) 245-6061</span>
+            </div>
+
+            {/* Chat */}
+            <button
+              onClick={onOpenChat} // ✅ opens chatbot properly
+              className="flex items-center space-x-2 text-slate-700 text-sm font-medium hover:text-slate-900 transition"
+            >
+              <MessageCircle size={18} />
+              <span>Chat</span>
+            </button>
+
+            {/* CTA */}
             <button
               onClick={handleContactClick}
-              className="bg-slate-900 text-white px-6 py-2.5 text-sm font-medium tracking-wide hover:bg-slate-800 transition-colors duration-200"
+              className="bg-slate-900 text-white px-6 py-2 text-sm font-medium tracking-wide rounded-md hover:bg-slate-800 transition-colors duration-200 shadow-md hover:shadow-lg"
             >
               Get a Quote
             </button>
+
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -82,6 +105,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
       {isMobileOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-6 space-y-4">
+
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -96,12 +120,26 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
               </button>
             ))}
 
+            {/* Mobile Chat */}
+            <button
+              onClick={() => {
+                setIsMobileOpen(false);
+                onOpenChat();
+              }}
+              className="w-full flex items-center space-x-2 text-slate-700 text-sm font-medium hover:text-slate-900 transition"
+            >
+              <MessageCircle size={18} />
+              <span>Chat</span>
+            </button>
+
+            {/* Mobile CTA */}
             <button
               onClick={handleContactClick}
-              className="w-full bg-slate-900 text-white px-6 py-2.5 text-sm font-medium tracking-wide hover:bg-slate-800 transition-colors duration-200"
+              className="w-full bg-slate-900 text-white px-6 py-2.5 text-sm font-medium tracking-wide rounded-md hover:bg-slate-800 transition-colors duration-200"
             >
               Get a Quote
             </button>
+
           </div>
         </div>
       )}

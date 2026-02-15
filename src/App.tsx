@@ -5,9 +5,11 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import OurProducts from './pages/OurProducts';
 import ContactUs from './pages/ContactUs';
+import ChatBot from './components/ChatBot';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [chatOpen, setChatOpen] = useState(false);
 
   useEffect(() => {
     const titles: Record<string, string> = {
@@ -16,6 +18,7 @@ function App() {
       products: 'Our Products - Perfect Union Insurance',
       contact: 'Contact Us - Perfect Union Insurance',
     };
+
     document.title = titles[currentPage] || titles.home;
   }, [currentPage]);
 
@@ -35,10 +38,23 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen">
-      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
-      <main>{renderPage()}</main>
+    <div className="min-h-screen flex flex-col">
+      
+      <Navigation
+        currentPage={currentPage}
+        onNavigate={setCurrentPage}
+        onOpenChat={() => setChatOpen(true)}
+      />
+
+      <main className="flex-grow">
+        {renderPage()}
+      </main>
+
       <Footer onNavigate={setCurrentPage} />
+
+      {/* ChatBot (Global) */}
+      <ChatBot open={chatOpen} setOpen={setChatOpen} />
+
     </div>
   );
 }
