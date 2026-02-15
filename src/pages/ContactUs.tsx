@@ -174,8 +174,8 @@ export default function ContactUs() {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-lg font-bold text-slate-900 mb-1">Phone</h3>
-                      <p className="text-slate-600">1-800-TRUCKING</p>
-                      <p className="text-slate-600">(1-800-878-2546)</p>
+                      <p className="text-slate-600">(463) 245-6061</p>
+                      <p className="text-slate-600">(463) 245-6061</p>
                     </div>
                   </div>
 
