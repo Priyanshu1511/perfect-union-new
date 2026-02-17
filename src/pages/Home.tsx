@@ -30,7 +30,7 @@ export default function Home({ onNavigate }: HomeProps) {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <video
   autoPlay

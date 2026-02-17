@@ -1,5 +1,3 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
-
 interface FooterProps {
   onNavigate: (page: string) => void;
 }
@@ -7,48 +5,54 @@ interface FooterProps {
 export default function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 py-14">
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+          {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-4">
+            <h3 className="text-xl font-semibold mb-4">
               Perfect Union Insurance
             </h3>
-            <p className="text-gray-400 leading-relaxed">
-              Protecting America's commercial trucking industry for over 30 years.
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Protecting America's commercial trucking industry with reliable,
+              affordable and trusted insurance solutions.
             </p>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
               <li>
                 <button
-                  onClick={() => onNavigate('home')}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  onClick={() => onNavigate("home")}
+                  className="text-gray-400 hover:text-white transition"
                 >
                   Home
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('about')}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  onClick={() => onNavigate("about")}
+                  className="text-gray-400 hover:text-white transition"
                 >
                   About Us
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('products')}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  onClick={() => onNavigate("products")}
+                  className="text-gray-400 hover:text-white transition"
                 >
                   Our Products
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('contact')}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  onClick={() => onNavigate("contact")}
+                  className="text-gray-400 hover:text-white transition"
                 >
                   Contact Us
                 </button>
@@ -56,39 +60,77 @@ export default function Footer({ onNavigate }: FooterProps) {
             </ul>
           </div>
 
+          {/* Products */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Products</h4>
-            <ul className="space-y-3 text-gray-400">
-              <li>Commercial Truck Insurance</li>
-              <li>Fleet Insurance</li>
-              <li>Owner-Operator Insurance</li>
-              <li>Cargo Insurance</li>
-              <li>General Liability</li>
+            <h4 className="text-lg font-semibold mb-4">Products</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <button
+                  onClick={() => onNavigate("contact")}
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Commercial Truck Insurance
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("contact")}
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Fleet Insurance
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("contact")}
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Owner-Operator Insurance
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("contact")}
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Cargo Insurance
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("contact")}
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  General Liability
+                </button>
+              </li>
             </ul>
           </div>
 
+          {/* Contact Section */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Contact</h4>
-            <div className="space-y-3">
-              <div className="flex items-start text-gray-400">
-                <Phone size={18} className="mt-1 mr-3 flex-shrink-0" />
-                <span>1-800-TRUCKING</span>
-              </div>
-              <div className="flex items-start text-gray-400">
-                <Mail size={18} className="mt-1 mr-3 flex-shrink-0" />
-                <span>quotes@apextrucking.com</span>
-              </div>
-              <div className="flex items-start text-gray-400">
-                <MapPin size={18} className="mt-1 mr-3 flex-shrink-0" />
-                <span>1500 Commerce Drive<br />Suite 300<br />Atlanta, GA 30318</span>
-              </div>
-            </div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>📞 1-844-327-9870</li>
+              <li>✉️ info@perfectunioninsurance.com</li>
+              <li>
+                <button
+                  onClick={() => onNavigate("contact")}
+                  className="hover:text-white transition"
+                >
+                  Get a Quote
+                </button>
+              </li>
+            </ul>
           </div>
+
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Perfect Union Insurance. All rights reserved.</p>
+        {/* Bottom Bar */}
+        <div className="border-t border-slate-700 mt-10 pt-6 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} Perfect Union Insurance. All rights reserved.
         </div>
+
       </div>
     </footer>
   );

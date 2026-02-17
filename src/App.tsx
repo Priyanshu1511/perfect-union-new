@@ -1,22 +1,22 @@
-import { useState, useEffect } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import OurProducts from './pages/OurProducts';
-import ContactUs from './pages/ContactUs';
-import ChatBot from './components/ChatBot';
+import { useState, useEffect } from "react";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import OurProducts from "./pages/OurProducts";
+import ContactUs from "./pages/ContactUs";
+import ChatBot from "./components/ChatBot";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState("home");
   const [chatOpen, setChatOpen] = useState(false);
 
   useEffect(() => {
     const titles: Record<string, string> = {
-      home: 'Perfect Union Insurance',
-      about: 'About Us - Perfect Union Insurance',
-      products: 'Our Products - Perfect Union Insurance',
-      contact: 'Contact Us - Perfect Union Insurance',
+      home: "Perfect Union Insurance",
+      about: "About Us - Perfect Union Insurance",
+      products: "Our Products - Perfect Union Insurance",
+      contact: "Contact Us - Perfect Union Insurance",
     };
 
     document.title = titles[currentPage] || titles.home;
@@ -24,13 +24,13 @@ function App() {
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'home':
+      case "home":
         return <Home onNavigate={setCurrentPage} />;
-      case 'about':
+      case "about":
         return <AboutUs />;
-      case 'products':
+      case "products":
         return <OurProducts />;
-      case 'contact':
+      case "contact":
         return <ContactUs />;
       default:
         return <Home onNavigate={setCurrentPage} />;
@@ -38,21 +38,22 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      
+    <div className="min-h-screen flex flex-col bg-white">
+
+      {/* Fixed Header */}
       <Navigation
         currentPage={currentPage}
         onNavigate={setCurrentPage}
         onOpenChat={() => setChatOpen(true)}
       />
 
-      <main className="flex-grow">
+      {/* Content Offset (36px top bar + 64px navbar) */}
+      <main className="flex-grow pt-[100px]">
         {renderPage()}
       </main>
 
       <Footer onNavigate={setCurrentPage} />
 
-      {/* ChatBot (Global) */}
       <ChatBot open={chatOpen} setOpen={setChatOpen} />
 
     </div>

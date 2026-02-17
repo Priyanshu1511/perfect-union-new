@@ -55,7 +55,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="pt-20">
+    <div className="">
       <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-800"></div>
 
