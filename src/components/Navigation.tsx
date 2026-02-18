@@ -59,7 +59,7 @@ export default function Navigation({
             <div className="flex items-center gap-1 whitespace-nowrap">
               <PhoneIcon />
               <span className="hidden sm:inline">
-                1-844-327-9870
+              (463) 245-6061
               </span>
             </div>
 

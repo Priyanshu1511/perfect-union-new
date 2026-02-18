@@ -1,4 +1,5 @@
 import { Award, Target, Heart, TrendingUp } from 'lucide-react';
+//import trucksImage from "";
 
 export default function AboutUs() {
   const values = [
@@ -47,26 +48,50 @@ export default function AboutUs() {
                 Our Story
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
-                <p>
-                  Founded in 1993, Apex Trucking Insurance was born from a simple observation:
-                  commercial truckers deserved insurance partners who truly understood their business.
-                </p>
-                <p>
-                  What started as a small regional operation has grown into one of the nation's most
-                  trusted providers of commercial trucking insurance. Our success stems from an
-                  unwavering commitment to our clients and a deep understanding of the transportation
-                  industry.
-                </p>
-                <p>
-                  Today, we protect thousands of trucking businesses across the country, from
-                  owner-operators to large fleet operations. Our team of industry specialists works
-                  tirelessly to ensure your business stays protected on every journey.
-                </p>
+              <div className="space-y-6 text-gray-700 leading-relaxed">
+  
+
+  <p>
+    In the world of transportation, every mile matters and every journey carries responsibility.
+    At <strong>Perfect Union Insurance Agency LLC</strong>, we understand that a truck is more than
+    just a vehicle — it is a livelihood, a promise, and a commitment to keep goods and businesses
+    moving forward. That is why we have dedicated ourselves to protecting what drives you.
+    We are not just an insurance provider. We are your partners on the road.
+  </p>
+
+  <p className="font-semibold text-slate-900">
+    What makes us different?
+  </p>
+
+  <p>
+    We know that behind every policy is a person: a driver working long hours, a family
+    depending on steady income, a business owner building something meaningful.
+    Your success is our success, and your peace of mind is our priority.
+    When challenges arise, we stand beside you, guiding you through the process
+    with honesty and care.
+  </p>
+
+  <p>
+    Customers choose us because they trust us.
+    They stay with us because we deliver.
+  </p>
+
+  <p className="font-medium text-slate-900">
+    Have a question? We are ready. <br />
+    Need advice? We are here. <br />
+    Looking for better rates? Let us work for you.
+  </p>
+
+  <p>
+    Wherever your next mile takes you, we will be right there with you.
+  </p>
+</div>
+
               </div>
             </div>
             <div className="bg-gray-100 h-96 flex items-center justify-center">
               <img
-                src="https://images.pexels.com/photos/1470166/pexels-photo-1470166.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Commercial trucks"
                 className="w-full h-full object-cover"
               />
