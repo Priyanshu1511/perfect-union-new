@@ -150,7 +150,7 @@ export default function AboutUs() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-serif font-bold mb-6">
-                Why Choose Apex?
+                Why Choose Perfect Union Insurance?
               </h2>
               <ul className="space-y-6 text-lg">
                 <li className="flex items-start">
