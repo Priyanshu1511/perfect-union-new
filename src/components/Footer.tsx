@@ -22,7 +22,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="md:pl-8 lg:pl-12">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
