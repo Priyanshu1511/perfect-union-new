@@ -123,8 +123,9 @@ export default function Navigation({
           </div>
         </div>
       </div>
+      
 
-      {/* ================= DESKTOP NAVIGATION ================= */}
+      {/* ================= DESKTOP NAVIGATION ================= navigation added */}
       <nav className="fixed top-16 inset-x-0 bg-white shadow-sm z-40 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-center gap-12 relative">
 
