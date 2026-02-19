@@ -8,13 +8,13 @@ import {
 import { useState, useEffect, useRef } from "react";
 
 interface NavigationProps {
-  currentPage: string;
+  //currentPage: string;
   onNavigate: (page: string) => void;
   onOpenChat: () => void;
 }
 
 export default function Navigation({
-  currentPage,
+  //currentPage,
   onNavigate,
   onOpenChat,
 }: NavigationProps) {
