@@ -42,7 +42,7 @@ function App() {
 
       {/* Fixed Header */}
       <Navigation
-        currentPage={currentPage}
+        //currentPage={currentPage}
         onNavigate={setCurrentPage}
         onOpenChat={() => setChatOpen(true)}
       />
