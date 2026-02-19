@@ -48,7 +48,7 @@ function App() {
       />
 
       {/* Content Offset (36px top bar + 64px navbar) */}
-      <main className="flex-grow pt-[100px]">
+      <main className="flex-grow pt-[120px]">
         {renderPage()}
       </main>
 
