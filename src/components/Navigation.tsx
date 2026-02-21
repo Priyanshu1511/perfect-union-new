@@ -8,13 +8,11 @@ import {
 import { useState, useEffect, useRef } from "react";
 
 interface NavigationProps {
-  
-  onNavigate: (page: string) => void;
+  onNavigate: (page: string, productId?: string) => void;
   onOpenChat: () => void;
 }
 
 export default function Navigation({
-  
   onNavigate,
   onOpenChat,
 }: NavigationProps) {
@@ -23,7 +21,6 @@ export default function Navigation({
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -40,19 +37,13 @@ export default function Navigation({
     };
   }, []);
 
-  const navItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About Us" },
-    { id: "contact", label: "Contact Us" },
-  ];
-
   const productItems = [
-    "Commercial Truck Insurance",
-    "Auto Physical Damage",
-    "Motor Truck Cargo",
-    "General Liability Insurance",
-    "Auto Insurance",
-    "Non-Trucking Liability / Bobtail"
+    { id: "commercial-truck", label: "Commercial Truck Insurance" },
+    { id: "auto-physical", label: "Auto Physical Damage" },
+    { id: "motor-cargo", label: "Motor Truck Cargo" },
+    { id: "general-liability", label: "General Liability Insurance" },
+    { id: "auto-insurance", label: "Auto Insurance" },
+    { id: "non-trucking", label: "Non-Trucking Liability / Bobtail" },
   ];
 
   const handlePageChange = (page: string) => {
@@ -62,20 +53,17 @@ export default function Navigation({
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleProductClick = () => {
-    onNavigate("products");
+  const handleProductClick = (productId: string) => {
+    onNavigate("products", productId);
     setIsProductsOpen(false);
     setIsMobileOpen(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <>
-      {/* ================= TOP HEADER ================= */}
+      {/* TOP HEADER */}
       <div className="fixed top-0 inset-x-0 bg-white border-b border-gray-200 shadow-md z-50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between relative">
-
-          {/* Logo */}
           <button
             onClick={() => handlePageChange("home")}
             className="flex items-center gap-3"
@@ -90,7 +78,6 @@ export default function Navigation({
             </span>
           </button>
 
-          {/* Center Contact (Desktop) */}
           <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-10 text-sm font-medium text-slate-700">
             <div className="flex items-center gap-2">
               <Phone size={16} />
@@ -106,7 +93,6 @@ export default function Navigation({
             </button>
           </div>
 
-          {/* Right Side */}
           <div className="flex items-center gap-4">
             <button
               onClick={() => handlePageChange("contact")}
@@ -124,12 +110,10 @@ export default function Navigation({
           </div>
         </div>
       </div>
-      
 
-      {/* ================= DESKTOP NAVIGATION ================= navigation added */}
+      {/* DESKTOP NAVIGATION */}
       <nav className="fixed top-16 inset-x-0 bg-white shadow-sm z-40 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-center gap-12 relative">
-
           <button
             onClick={() => handlePageChange("home")}
             className="text-sm font-medium text-slate-600 hover:text-slate-900"
@@ -144,7 +128,6 @@ export default function Navigation({
             About Us
           </button>
 
-          {/* PRODUCTS DROPDOWN */}
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setIsProductsOpen(!isProductsOpen)}
@@ -163,11 +146,11 @@ export default function Navigation({
               <div className="absolute top-full mt-3 w-64 bg-white border border-gray-200 rounded-md shadow-xl py-2">
                 {productItems.map((product) => (
                   <button
-                    key={product}
-                    onClick={handleProductClick}
+                    key={product.id}
+                    onClick={() => handleProductClick(product.id)}
                     className="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-gray-100"
                   >
-                    {product}
+                    {product.label}
                   </button>
                 ))}
               </div>
@@ -182,62 +165,6 @@ export default function Navigation({
           </button>
         </div>
       </nav>
-
-      {/* ================= MOBILE MENU ================= */}
-      {isMobileOpen && (
-        <div className="fixed top-16 inset-x-0 bg-white border-t border-gray-200 z-40 md:hidden">
-          <div className="px-6 py-6 space-y-5">
-
-            <div className="flex items-center gap-3 text-sm font-medium text-slate-700">
-              <Phone size={16} />
-              <span>(463) 245-6061</span>
-            </div>
-
-            <button
-              onClick={onOpenChat}
-              className="flex items-center gap-3 text-sm font-medium text-slate-700"
-            >
-              <MessageCircle size={16} />
-              Chat
-            </button>
-
-            <div className="border-t border-gray-200 my-4"></div>
-
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handlePageChange(item.id)}
-                className="block w-full text-left text-base font-medium text-slate-700"
-              >
-                {item.label}
-              </button>
-            ))}
-
-            <div className="space-y-2">
-              <div className="text-base font-semibold text-slate-800">
-                Our Products
-              </div>
-              {productItems.map((product) => (
-                <button
-                  key={product}
-                  onClick={handleProductClick}
-                  className="block w-full text-left text-sm text-slate-600 pl-3"
-                >
-                  {product}
-                </button>
-              ))}
-            </div>
-
-            <button
-              onClick={() => handlePageChange("contact")}
-              className="w-full bg-slate-900 text-white px-6 py-2.5 text-sm font-medium rounded-md mt-4"
-            >
-              Get a Quote
-            </button>
-          </div>
-        </div>
-      )}
     </>
   );
 }
-

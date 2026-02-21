@@ -9,8 +9,16 @@ import ChatBot from "./components/ChatBot";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
   const [chatOpen, setChatOpen] = useState(false);
 
+  // 🔹 Handle navigation with optional productId
+  const handleNavigate = (page: string, productId?: string) => {
+    setCurrentPage(page);
+    setSelectedProduct(productId || null);
+  };
+
+  // 🔹 Update page title
   useEffect(() => {
     const titles: Record<string, string> = {
       home: "Perfect Union Insurance",
@@ -25,35 +33,40 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case "home":
-        return <Home onNavigate={setCurrentPage} />;
+        return <Home onNavigate={handleNavigate} />;
+
       case "about":
         return <AboutUs />;
+
       case "products":
-        return <OurProducts />;
+        return <OurProducts selectedProduct={selectedProduct} />;
+
       case "contact":
         return <ContactUs />;
+
       default:
-        return <Home onNavigate={setCurrentPage} />;
+        return <Home onNavigate={handleNavigate} />;
     }
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
 
-      {/* Fixed Header */}
+      {/* HEADER */}
       <Navigation
-        //currentPage={currentPage}
-        onNavigate={setCurrentPage}
+        onNavigate={handleNavigate}
         onOpenChat={() => setChatOpen(true)}
       />
 
-      {/* Content Offset (36px top bar + 64px navbar) */}
+      {/* MAIN CONTENT */}
       <main className="flex-grow pt-[120px]">
         {renderPage()}
       </main>
 
-      <Footer onNavigate={setCurrentPage} />
+      {/* FOOTER */}
+      <Footer onNavigate={handleNavigate} />
 
+      {/* CHATBOT */}
       <ChatBot open={chatOpen} setOpen={setChatOpen} />
 
     </div>
