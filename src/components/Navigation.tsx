@@ -51,7 +51,7 @@ export default function Navigation({
     "Fleet Insurance",
     "Owner-Operator Insurance",
     "Cargo Insurance",
-    "General Liability",
+    "Auto Insurance",
   ];
 
   const handlePageChange = (page: string) => {
