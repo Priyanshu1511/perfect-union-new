@@ -48,10 +48,11 @@ export default function Navigation({
 
   const productItems = [
     "Commercial Truck Insurance",
-    "Fleet Insurance",
-    "Owner-Operator Insurance",
-    "Cargo Insurance",
+    "Auto Physical Damage",
+    "Motor Truck Cargo",
+    "General Liability Insurance",
     "Auto Insurance",
+    "Non-Trucking Liability / Bobtail"
   ];
 
   const handlePageChange = (page: string) => {
