@@ -55,7 +55,7 @@ function App() {
         return <AboutUs />;
 
       case "products":
-        return <OurProducts />;
+         return <OurProducts onNavigate={handleNavigate} />;
 
       case "contact":
         return <ContactUs />;

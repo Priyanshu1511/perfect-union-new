@@ -59,7 +59,7 @@ export default function Home({ onNavigate }: HomeProps) {
             Comprehensive coverage, exceptional service, unwavering reliability.
           </p>
           <button
-  onClick={() => onNavigate('contact')}
+  onClick={() => onNavigate('contact' , 'contact-form')}
   className="bg-white text-slate-900 px-6 py-2.5 text-sm font-medium tracking-wide hover:bg-gray-100 transition-all duration-300 shadow-md hover:shadow-lg rounded-md"
 >
   Get a Quote

@@ -1,12 +1,18 @@
 import { Truck, Users, Package, Shield, FileCheck, Clock } from "lucide-react";
 import { useEffect } from "react";
-import physicalDamageImg from "./physicaldamage.jpeg";
+//import physicalDamageImg from "./physicaldamage.jpeg";
+
+/*interface OurProductsProps {
+  selectedProduct?: string | null;
+}*/
 
 interface OurProductsProps {
   selectedProduct?: string | null;
+  onNavigate: (page: string, sectionId?: string) => void;
 }
+//export default function OurProducts({ selectedProduct, o }: OurProductsProps)
 
-export default function OurProducts({ selectedProduct }: OurProductsProps) {
+export default function OurProducts({ selectedProduct , onNavigate  }: OurProductsProps) {
   const products = [
     {
       id: "commercial-truck",
@@ -21,7 +27,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
         "Required by Law",
       ],
       image:
-        "https://images.pexels.com/photos/1630928/pexels-photo-1630928.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://raw.githubusercontent.com/Priyanshu1511/perfect-union-new/refs/heads/main/src/assets/utility/commercialTruck.jpeg",
     },
     {
       id: "auto-physical",
@@ -180,7 +186,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
                     ))}
                   </div>
 
-                  <button className="bg-slate-900 text-white px-6 py-3 text-sm font-medium tracking-wide hover:bg-slate-800 transition-colors duration-200">
+                  <button className="bg-slate-900 text-white px-6 py-3 text-sm font-medium tracking-wide hover:bg-slate-800 transition-colors duration-200" onClick={() => onNavigate('contact' , 'contact-form')}>
                     Learn More
                   </button>
                 </div>
