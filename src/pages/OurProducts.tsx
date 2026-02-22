@@ -35,7 +35,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
         "Glass Breakage",
       ],
       image:
-        "https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "C:\Users\Priyanshu\Downloads\Perfect-code\perfect-union-new\src\pages\physicaldamage.jpeg",
     },
     {
       id: "motor-cargo",

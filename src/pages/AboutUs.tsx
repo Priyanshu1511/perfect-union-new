@@ -106,9 +106,7 @@ export default function AboutUs() {
             Our Mission
           </h2>
           <p className="text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed font-light">
-            To provide commercial trucking businesses with comprehensive, reliable insurance solutions
-            that protect their assets, support their growth, and deliver exceptional value through
-            personalized service and industry expertise.
+          To goes beyond offering competitive pricing. We stay updated with industry changes, compliance requirements, and market trends so you don’t have to. We ensure that every aspect of your coverage fulfills legal obligations while also protecting you from unexpected situations. Whether it’s liability, cargo, physical damage, or specialized trucking coverage, we aim to be your single, reliable destination — your one solution for all insurance-related queries.
           </p>
         </div>
       </section>
@@ -120,7 +118,8 @@ export default function AboutUs() {
               Our Core Values
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              The principles that guide every decision we make and every relationship we build
+            Custom insurance solutions designed around your journey, your risks, and your goals. Complete protection, complete confidentiality.
+
             </p>
           </div>
 
@@ -155,42 +154,57 @@ export default function AboutUs() {
               <ul className="space-y-6 text-lg">
                 <li className="flex items-start">
                   <span className="text-2xl mr-4">•</span>
-                  <span>Over 30 years of specialized experience in commercial trucking insurance</span>
+                  <span>Personalized service from dedicated industry experts who knows your business.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-2xl mr-4">•</span>
-                  <span>Personalized service from dedicated industry experts who know your business</span>
+                  <span>Competitive rates backed by comprehensive coverage options.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-2xl mr-4">•</span>
-                  <span>Competitive rates backed by comprehensive coverage options</span>
+                  <span>24/7 claims support ensuring minimal disruption to your operations.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-2xl mr-4">•</span>
-                  <span>24/7 claims support ensuring minimal disruption to your operations</span>
+                  <span>Quick response with real solutions.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-2xl mr-4">•</span>
-                  <span>Proven track record with thousands of satisfied clients nationwide</span>
+                  <span>Reliable protection that keeps your fleet moving.</span>
                 </li>
               </ul>
             </div>
-            <div className="bg-white/10 p-12 backdrop-blur-sm">
-              <div className="space-y-8">
-                <div className="border-l-4 border-white pl-6">
-                  <div className="text-5xl font-bold mb-2">30+</div>
-                  <div className="text-lg text-gray-300">Years of Experience</div>
-                </div>
-                <div className="border-l-4 border-white pl-6">
-                  <div className="text-5xl font-bold mb-2">5,000+</div>
-                  <div className="text-lg text-gray-300">Businesses Protected</div>
-                </div>
-                <div className="border-l-4 border-white pl-6">
-                  <div className="text-5xl font-bold mb-2">24/7</div>
-                  <div className="text-lg text-gray-300">Claims Support</div>
-                </div>
-              </div>
-            </div>
+           
+            <div
+  className="relative p-12 overflow-hidden rounded-lg"
+  style={{
+    backgroundImage:
+      "url('https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1200')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* Dark Overlay for readability */}
+  <div className="absolute inset-0 bg-black/60"></div>
+
+  {/* Content */}
+  <div className="relative z-10 space-y-8 text-white">
+    <div className="border-l-4 border-white pl-6">
+      <div className="text-5xl font-bold mb-2"></div>
+      <div className="text-lg text-gray-200"></div>
+    </div>
+
+    <div className="border-l-4 border-white pl-6">
+      <div className="text-5xl font-bold mb-2">5,000+</div>
+      <div className="text-lg text-gray-200">Businesses Protected</div>
+    </div>
+
+    <div className="border-l-4 border-white pl-6">
+      <div className="text-5xl font-bold mb-2">24/7</div>
+      <div className="text-lg text-gray-200">Claims Support</div>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </section>
