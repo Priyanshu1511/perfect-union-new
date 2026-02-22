@@ -5,6 +5,7 @@ interface HomeProps {
   onNavigate: (page: string) => void;
 }
 
+
 export default function Home({ onNavigate }: HomeProps) {
   const services = [
     {
@@ -137,7 +138,7 @@ export default function Home({ onNavigate }: HomeProps) {
             Get a personalized quote tailored to your business needs. Our experts are standing by.
           </p>
           <button
-  onClick={() => onNavigate('contact')}
+  onClick={() => onNavigate('contact' , 'contact-form')}
   className="bg-white text-slate-900 px-7 py-2.5 text-base font-medium tracking-wide rounded-md hover:bg-gray-100 transition-all duration-200"
 >
   Contact Us Today

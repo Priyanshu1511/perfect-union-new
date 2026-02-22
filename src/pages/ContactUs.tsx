@@ -335,7 +335,7 @@ export default function ContactUs() {
         </div>
       </section>
 
-      <section className="py-24 px-4 bg-white">
+      <section id="contact-form" className="py-24 px-4 bg-white scroll-mt-[120px]" >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <div>

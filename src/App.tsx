@@ -9,16 +9,31 @@ import ChatBot from "./components/ChatBot";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
-  const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
   const [chatOpen, setChatOpen] = useState(false);
 
-  // 🔹 Handle navigation with optional productId
-  const handleNavigate = (page: string, productId?: string) => {
+  // 🔥 Handle navigation with optional section scroll
+  const handleNavigate = (page: string, sectionId?: string) => {
     setCurrentPage(page);
-    setSelectedProduct(productId || null);
+
+    // Wait for page render then scroll
+    setTimeout(() => {
+      if (sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      } else {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    }, 100);
   };
 
-  // 🔹 Update page title
   useEffect(() => {
     const titles: Record<string, string> = {
       home: "Perfect Union Insurance",
@@ -39,7 +54,7 @@ function App() {
         return <AboutUs />;
 
       case "products":
-        return <OurProducts selectedProduct={selectedProduct} />;
+        return <OurProducts />;
 
       case "contact":
         return <ContactUs />;
@@ -52,23 +67,19 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
 
-      {/* HEADER */}
       <Navigation
+        currentPage={currentPage}
         onNavigate={handleNavigate}
         onOpenChat={() => setChatOpen(true)}
       />
 
-      {/* MAIN CONTENT */}
-      <main className="flex-grow pt-[120px]">
+      <main className="flex-grow pt-[100px]">
         {renderPage()}
       </main>
 
-      {/* FOOTER */}
       <Footer onNavigate={handleNavigate} />
 
-      {/* CHATBOT */}
       <ChatBot open={chatOpen} setOpen={setChatOpen} />
-
     </div>
   );
 }
