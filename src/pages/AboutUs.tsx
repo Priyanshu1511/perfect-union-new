@@ -40,7 +40,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="py-24 px-4 bg-white">
+      {/*<section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -92,6 +92,44 @@ export default function AboutUs() {
             <div className="bg-gray-100 h-96 flex items-center justify-center">
               <img
                 src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Commercial trucks"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>*/
+}
+
+<section className="py-24 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">
+                Our Story
+              </h2>
+              <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+                <p>
+                In transportation, every mile matters — and at Perfect Union Insurance Agency LLC, we know a truck is more than a vehicle. It’s your livelihood, your commitment, and your future. That’s why we’re dedicated to protecting what drives you.
+
+We’re more than an insurance provider — we’re your partners on the road. Behind every policy is a hardworking driver, a family, and a growing business. Your peace of mind is our priority, and when challenges arise, we stand with you every step of the way.
+
+<p><strong>Have a question? We’re ready.</strong></p>
+<p><strong>Need advice? We’re here.</strong></p>
+
+Looking for better rates? Let us work for you.
+
+Wherever the road takes you, we’ll be right there with you.
+                </p>
+                <p>
+                  
+                </p>
+              </div>
+            </div>
+            <div className="bg-gray-100 h-96 flex items-center justify-center">
+              <img src=
+        "https://raw.githubusercontent.com/Priyanshu1511/perfect-union-new/refs/heads/main/src/assets/utility/commercialTruck.jpeg"
+               
                 alt="Commercial trucks"
                 className="w-full h-full object-cover"
               />
