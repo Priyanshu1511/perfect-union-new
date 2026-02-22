@@ -69,9 +69,9 @@ export default function AboutUs() {
     Your success is our success, and your peace of mind is our priority.
     When challenges arise, we stand beside you, guiding you through the process
     with honesty and care.
-  </p>
+  
 
-  <p>
+  
     Customers choose us because they trust us.
     They stay with us because we deliver.
   </p>
