@@ -195,13 +195,13 @@ export default function AboutUs() {
     </div>
 
     <div className="border-l-4 border-white pl-6">
-      <div className="text-5xl font-bold mb-2">5,000+</div>
-      <div className="text-lg text-gray-200">Businesses Protected</div>
+      <div className="text-5xl font-bold mb-2"></div>
+      <div className="text-lg text-gray-200"></div>
     </div>
 
     <div className="border-l-4 border-white pl-6">
-      <div className="text-5xl font-bold mb-2">24/7</div>
-      <div className="text-lg text-gray-200">Claims Support</div>
+      <div className="text-5xl font-bold mb-2"></div>
+      <div className="text-lg text-gray-200"></div>
     </div>
   </div>
 </div>
