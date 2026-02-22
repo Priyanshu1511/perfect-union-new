@@ -175,35 +175,24 @@ export default function AboutUs() {
               </ul>
             </div>
            
-            <div
-  className="relative p-12 overflow-hidden rounded-lg"
-  style={{
-    backgroundImage:
-      "url('https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1200')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  {/* Dark Overlay for readability */}
-  <div className="absolute inset-0 bg-black/60"></div>
+            <div className="relative p-16 rounded-lg bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+  
+  <div className="max-w-3xl">
+    <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
+      5+ Years of Experience in Customer Relationships
+    </h2>
 
-  {/* Content */}
-  <div className="relative z-10 space-y-8 text-white">
-    <div className="border-l-4 border-white pl-6">
-      <div className="text-5xl font-bold mb-2"></div>
-      <div className="text-lg text-gray-200"></div>
-    </div>
-
-    <div className="border-l-4 border-white pl-6">
-      <div className="text-5xl font-bold mb-2"></div>
-      <div className="text-lg text-gray-200"></div>
-    </div>
-
-    <div className="border-l-4 border-white pl-6">
-      <div className="text-5xl font-bold mb-2"></div>
-      <div className="text-lg text-gray-200"></div>
-    </div>
+    <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+      Our vision is to set the standard of excellence among insurance providers
+      by being innovative, financially strong, and delivering the right support
+      and service to our customers — consistently exceeding their expectations.
+      <br /><br />
+      Our dedicated team brings over five years of hands-on experience in
+      building trusted client relationships, ensuring reliability, transparency,
+      and long-term protection for every business we serve.
+    </p>
   </div>
+
 </div>
           </div>
         </div>
