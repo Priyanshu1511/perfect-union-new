@@ -145,57 +145,43 @@ export default function AboutUs() {
       </section>
 
       <section className="py-24 px-4 bg-slate-900 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-serif font-bold mb-6">
-                Why Choose Perfect Union Insurance?
-              </h2>
-              <ul className="space-y-6 text-lg">
-                <li className="flex items-start">
-                  <span className="text-2xl mr-4">•</span>
-                  <span>Personalized service from dedicated industry experts who knows your business.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-2xl mr-4">•</span>
-                  <span>Competitive rates backed by comprehensive coverage options.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-2xl mr-4">•</span>
-                  <span>24/7 claims support ensuring minimal disruption to your operations.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-2xl mr-4">•</span>
-                  <span>Quick response with real solutions.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-2xl mr-4">•</span>
-                  <span>Reliable protection that keeps your fleet moving.</span>
-                </li>
-              </ul>
-            </div>
-           
-            <div className="relative p-16 rounded-lg bg-gradient-to-r from-slate-900 to-slate-800 text-white">
-  
-  <div className="max-w-3xl">
-    <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
-      5+ Years of Experience in Customer Relationships
-    </h2>
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-20 px-6">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
 
-    <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-      Our vision is to set the standard of excellence among insurance providers
+    {/* LEFT SIDE */}
+    <div>
+      <h2 className="text-4xl font-serif font-bold mb-6">
+        Why Choose Perfect Union Insurance?
+      </h2>
+
+      <ul className="space-y-6 text-lg text-gray-200">
+        <li>• Personalized service from dedicated industry experts.</li>
+        <li>• Competitive rates with comprehensive coverage.</li>
+        <li>• 24/7 claims support.</li>
+        <li>• Quick response with real solutions.</li>
+        <li>• Reliable protection that keeps your fleet moving.</li>
+      </ul>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div>
+      <h2 className="text-4xl font-serif font-bold mb-6 leading-tight">
+        5+ Years of Experience in Customer Relationships
+      </h2>
+
+      <p className="text-lg text-gray-200 leading-relaxed">
+        Our vision is to set the standard of excellence among insurance providers among insurance providers
       by being innovative, financially strong, and delivering the right support
       and service to our customers — consistently exceeding their expectations.
       <br /><br />
       Our dedicated team brings over five years of hands-on experience in
       building trusted client relationships, ensuring reliability, transparency,
       and long-term protection for every business we serve.
-    </p>
-  </div>
+      </p>
+    </div>
 
+  </div>
 </div>
-          </div>
-        </div>
       </section>
     </div>
   );
