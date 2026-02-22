@@ -35,7 +35,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
         "Glass Breakage",
       ],
       image:
-        "C:\Users\Priyanshu\Downloads\Perfect-code\perfect-union-new\src\pages\physicaldamage.jpeg",
+        "url('https://github.com/Priyanshu1511/perfect-union-new/blob/main/src/pages/physicaldamage.jpeg')",
     },
     {
       id: "motor-cargo",
