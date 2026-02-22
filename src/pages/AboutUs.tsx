@@ -35,7 +35,7 @@ export default function AboutUs() {
             Built on Trust.<br />Driven by Excellence.
           </h1>
           <p className="text-xl text-gray-200 font-light">
-            Three decades of protecting America's commercial trucking industry
+          Driven to protect America’s commercial trucking industry
           </p>
         </div>
       </section>
