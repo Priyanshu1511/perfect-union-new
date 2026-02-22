@@ -105,7 +105,7 @@ export default function AboutUs() {
           <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">
             Our Mission
           </h2>
-          <p className="text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-xl text-slate-600 max-w-5xl mx-auto">
           To goes beyond offering competitive pricing. We stay updated with industry changes, compliance requirements, and market trends so you don’t have to. We ensure that every aspect of your coverage fulfills legal obligations while also protecting you from unexpected situations. Whether it’s liability, cargo, physical damage, or specialized trucking coverage, we aim to be your single, reliable destination — your one solution for all insurance-related queries.
           </p>
         </div>
