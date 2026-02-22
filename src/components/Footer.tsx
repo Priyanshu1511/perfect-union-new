@@ -113,14 +113,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>📞 (463) 245-6061</li>
               <li>✉️ contact@perfectrunionins.com</li>
-              <li>
-                <button
-                  onClick={() => onNavigate("contact")}
-                  className="hover:text-white transition"
-                >
-                  Get a Quote
-                </button>
-              </li>
+            
             </ul>
           </div>
 
