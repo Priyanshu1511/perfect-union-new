@@ -94,6 +94,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
         "Comprehensive Protection",
         "Affordable Rates",
         "Easy Claim Process",
+        "Expert Support"
       ],
       image:
         "https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=800",
