@@ -42,8 +42,9 @@ export default function Navigation({
     { id: "auto-physical", label: "Auto Physical Damage" },
     { id: "motor-cargo", label: "Motor Truck Cargo" },
     { id: "general-liability", label: "General Liability Insurance" },
-    { id: "auto-insurance", label: "Auto Insurance" },
+    
     { id: "non-trucking", label: "Non-Trucking Liability / Bobtail" },
+    { id: "auto-insurance", label: "Auto Insurance" },
   ];
 
   const handlePageChange = (page: string) => {

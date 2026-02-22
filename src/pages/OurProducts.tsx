@@ -67,20 +67,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
       image:
         "https://images.pexels.com/photos/4391470/pexels-photo-4391470.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
-    {
-      id: "auto-insurance",
-      icon: FileCheck,
-      title: "Auto Insurance",
-      description:
-        "Protect your vehicle and peace of mind with our comprehensive car insurance options.",
-      features: [
-        "Comprehensive Protection",
-        "Affordable Rates",
-        "Easy Claim Process",
-      ],
-      image:
-        "https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
+    
     {
       id: "non-trucking",
       icon: Clock,
@@ -95,6 +82,21 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
       ],
       image:
         "https://images.pexels.com/photos/2449600/pexels-photo-2449600.jpeg?auto=compress&cs=tinysrgb&w=800",
+    },
+
+    {
+      id: "auto-insurance",
+      icon: FileCheck,
+      title: "Auto Insurance",
+      description:
+        "Protect your vehicle and peace of mind with our comprehensive car insurance options.",
+      features: [
+        "Comprehensive Protection",
+        "Affordable Rates",
+        "Easy Claim Process",
+      ],
+      image:
+        "https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
   ];
 
