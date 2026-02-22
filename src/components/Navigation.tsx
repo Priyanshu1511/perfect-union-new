@@ -5,7 +5,7 @@ import {
   MessageCircle,
   ChevronDown,
 } from "lucide-react";
-import logo from "../components/logo3.png";
+//import logo from "../components/logo3.png";
 import { useState, useEffect, useRef } from "react";
 
 interface NavigationProps {
@@ -73,7 +73,7 @@ export default function Navigation({
             className="flex items-center gap-3"
           >
             <img
-              src={logo}
+              src="./logo3.png"
               alt="Perfect Union Insurance"
               className="h-10 w-auto"
             />
