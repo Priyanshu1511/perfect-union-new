@@ -2,7 +2,7 @@ import { Shield, Truck, Users, Clock } from 'lucide-react';
 //import truckVideo from "../assets/movie/truck-video.mp4";
 
 interface HomeProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (page: string, sectionId?: string) => void;
 }
 
 

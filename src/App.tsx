@@ -12,6 +12,7 @@ function App() {
   const [chatOpen, setChatOpen] = useState(false);
 
   // 🔥 Handle navigation with optional section scroll
+  
   const handleNavigate = (page: string, sectionId?: string) => {
     setCurrentPage(page);
 
@@ -67,11 +68,10 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
 
-      <Navigation
-        currentPage={currentPage}
-        onNavigate={handleNavigate}
-        onOpenChat={() => setChatOpen(true)}
-      />
+<Navigation
+  onNavigate={handleNavigate}
+  onOpenChat={() => setChatOpen(true)}
+/>
 
       <main className="flex-grow pt-[100px]">
         {renderPage()}
