@@ -1,5 +1,6 @@
 import { Truck, Users, Package, Shield, FileCheck, Clock } from "lucide-react";
 import { useEffect } from "react";
+import physicalDamageImg from "./physicaldamage.jpeg";
 
 interface OurProductsProps {
   selectedProduct?: string | null;
@@ -35,7 +36,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
         "Glass Breakage",
       ],
       image:
-        "url('https://github.com/Priyanshu1511/perfect-union-new/blob/main/src/pages/physicaldamage.jpeg')",
+       "https://raw.githubusercontent.com/Priyanshu1511/perfect-union-new/refs/heads/main/src/pages/physicaldamage.jpeg",
     },
     {
       id: "motor-cargo",
@@ -50,7 +51,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
         "Flexible Deductible Options",
       ],
       image:
-        "https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://raw.githubusercontent.com/Priyanshu1511/perfect-union-new/refs/heads/main/src/assets/utility/Motor%20Cargo.jpeg",
     },
     {
       id: "general-liability",
@@ -65,7 +66,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
         "Medical Expense Coverage",
       ],
       image:
-        "https://images.pexels.com/photos/4391470/pexels-photo-4391470.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://raw.githubusercontent.com/Priyanshu1511/perfect-union-new/refs/heads/main/src/assets/utility/General%20Liability.jpeg",
     },
     
     {
@@ -81,7 +82,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
         "Affordable Rates",
       ],
       image:
-        "https://images.pexels.com/photos/2449600/pexels-photo-2449600.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://raw.githubusercontent.com/Priyanshu1511/perfect-union-new/refs/heads/main/src/assets/utility/bobtail.jpeg",
     },
 
     {
@@ -97,7 +98,7 @@ export default function OurProducts({ selectedProduct }: OurProductsProps) {
         "Expert Support"
       ],
       image:
-        "https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://raw.githubusercontent.com/Priyanshu1511/perfect-union-new/refs/heads/main/src/assets/utility/Auto%20Car%20Insurance.jpeg",
     },
   ];
 
