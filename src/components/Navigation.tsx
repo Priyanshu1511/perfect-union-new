@@ -5,7 +5,6 @@ import {
   MessageCircle,
   ChevronDown,
 } from "lucide-react";
-//import logo from "../components/logo3.png";
 import { useState, useEffect, useRef } from "react";
 
 interface NavigationProps {
@@ -19,9 +18,9 @@ export default function Navigation({
 }: NavigationProps) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
-
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  /* ================= CLOSE DROPDOWN ON OUTSIDE CLICK ================= */
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -33,9 +32,8 @@ export default function Navigation({
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
+    return () =>
       document.removeEventListener("mousedown", handleClickOutside);
-    };
   }, []);
 
   const productItems = [
@@ -43,7 +41,6 @@ export default function Navigation({
     { id: "auto-physical", label: "Auto Physical Damage" },
     { id: "motor-cargo", label: "Motor Truck Cargo" },
     { id: "general-liability", label: "General Liability Insurance" },
-    
     { id: "non-trucking", label: "Non-Trucking Liability / Bobtail" },
     { id: "auto-insurance", label: "Auto Insurance" },
   ];
@@ -57,38 +54,38 @@ export default function Navigation({
 
   const handleProductClick = (productId: string) => {
     onNavigate("products", productId);
-    setIsProductsOpen(false);
     setIsMobileOpen(false);
+    setIsProductsOpen(false);
   };
 
   return (
     <>
-      {/* TOP HEADER */}
-      <div className="fixed top-0 inset-x-0 bg-white border-b border-gray-200 shadow-md z-50">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between relative">
-  
+      {/* ================= HEADER ================= */}
+      <header className="fixed top-0 inset-x-0 bg-white border-b shadow-sm z-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+
           {/* LOGO */}
           <button
             onClick={() => handlePageChange("home")}
-            className="flex items-center gap-3"
+            className="flex items-center gap-2"
           >
             <img
-              src="./logo3.png"
+              src="/logo3.png"
               alt="Perfect Union Insurance"
-              className="h-10 w-auto"
+              className="h-8 sm:h-9 w-auto"
             />
-            <span className="hidden sm:block text-lg font-semibold text-slate-800">
+            <span className="hidden lg:block font-semibold text-slate-800">
               Perfect Union Insurance
             </span>
           </button>
-  
-          {/* CENTER CONTACT (Desktop Only) */}
-          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-10 text-sm font-medium text-slate-700">
+
+          {/* DESKTOP CONTACT */}
+          <div className="hidden xl:flex items-center gap-8 text-sm font-medium text-slate-700">
             <div className="flex items-center gap-2">
               <Phone size={16} />
               <span>(463) 245-6061</span>
             </div>
-  
+
             <button
               onClick={onOpenChat}
               className="flex items-center gap-2 hover:text-black transition"
@@ -97,16 +94,16 @@ export default function Navigation({
               <span>Chat</span>
             </button>
           </div>
-  
+
           {/* RIGHT SIDE */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <button
               onClick={() => handlePageChange("contact")}
-              className="hidden md:block bg-slate-900 text-white px-6 py-2 text-sm font-medium rounded-md hover:bg-slate-800 transition"
+              className="hidden md:block bg-slate-900 text-white px-4 py-2 text-sm rounded-md hover:bg-slate-800 transition"
             >
               Get a Quote
             </button>
-  
+
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               className="md:hidden"
@@ -115,34 +112,34 @@ export default function Navigation({
             </button>
           </div>
         </div>
-      </div>
-  
-      {/* DESKTOP NAVIGATION */}
-      <nav className="fixed top-16 inset-x-0 bg-white shadow-sm z-40 hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-center gap-12 relative">
-  
+      </header>
+
+      {/* ================= DESKTOP NAV ================= */}
+      <nav className="hidden md:block fixed top-16 inset-x-0 bg-white border-b z-40">
+        <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-center gap-8 text-sm">
+
           <button
             onClick={() => handlePageChange("home")}
-            className="text-sm font-medium text-slate-600 hover:text-slate-900"
+            className="font-medium text-slate-600 hover:text-black"
           >
             Home
           </button>
-  
+
           <button
             onClick={() => handlePageChange("about")}
-            className="text-sm font-medium text-slate-600 hover:text-slate-900"
+            className="font-medium text-slate-600 hover:text-black"
           >
             About Us
           </button>
-  
+
           {/* PRODUCTS */}
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => {
-                handlePageChange("products");  // <-- GO TO PRODUCTS PAGE
-                setIsProductsOpen(!isProductsOpen);
+                onNavigate("products");
+                setIsProductsOpen(true);
               }}
-              className="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-slate-900"
+              className="flex items-center gap-1 font-medium text-slate-600 hover:text-black"
             >
               Our Products
               <ChevronDown
@@ -152,14 +149,14 @@ export default function Navigation({
                 }`}
               />
             </button>
-  
+
             {isProductsOpen && (
-              <div className="absolute top-full mt-3 w-64 bg-white border border-gray-200 rounded-md shadow-xl py-2">
+              <div className="absolute left-1/2 -translate-x-1/2 mt-3 w-64 bg-white border rounded-md shadow-xl py-2">
                 {productItems.map((product) => (
                   <button
                     key={product.id}
                     onClick={() => handleProductClick(product.id)}
-                    className="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-gray-100"
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                   >
                     {product.label}
                   </button>
@@ -167,67 +164,46 @@ export default function Navigation({
               </div>
             )}
           </div>
-  
+
           <button
             onClick={() => handlePageChange("contact")}
-            className="text-sm font-medium text-slate-600 hover:text-slate-900"
+            className="font-medium text-slate-600 hover:text-black"
           >
             Contact Us
           </button>
         </div>
       </nav>
-  
-      {/* MOBILE MENU */}
+
+      {/* ================= MOBILE MENU ================= */}
       {isMobileOpen && (
-        <div className="fixed top-16 inset-x-0 bg-white shadow-md z-30 md:hidden">
-          <div className="flex flex-col px-6 py-6 space-y-4 text-sm font-medium text-slate-700">
-  
-            <button onClick={() => handlePageChange("home")}>Home</button>
-  
-            <button onClick={() => handlePageChange("about")}>
+        <div className="fixed top-16 inset-x-0 bottom-0 bg-white z-30 md:hidden overflow-y-auto">
+          <div className="px-6 py-8 space-y-6 text-base font-medium text-slate-800">
+
+            <button onClick={() => handlePageChange("home")} className="block w-full text-left">
+              Home
+            </button>
+
+            <button onClick={() => handlePageChange("about")} className="block w-full text-left">
               About Us
             </button>
-  
-            <button
-              onClick={() => {
-                handlePageChange("products");
-                setIsProductsOpen(!isProductsOpen);
-              }}
-              className="flex justify-between items-center"
-            >
-              Products
-              <ChevronDown
-                size={16}
-                className={`transition-transform ${
-                  isProductsOpen ? "rotate-180" : ""
-                }`}
-              />
+
+            <button onClick={() => handlePageChange("products")} className="block w-full text-left">
+              Our Products
             </button>
-  
-            {isProductsOpen &&
-              productItems.map((product) => (
-                <button
-                  key={product.id}
-                  onClick={() => handleProductClick(product.id)}
-                  className="pl-4 text-left text-slate-600"
-                >
-                  {product.label}
-                </button>
-              ))}
-  
-            <button onClick={() => handlePageChange("contact")}>
+
+            <button onClick={() => handlePageChange("contact")} className="block w-full text-left">
               Contact
             </button>
-  
-            <div className="pt-4 border-t">
+
+            <div className="pt-6 border-t space-y-4 text-sm">
               <div className="flex items-center gap-2">
                 <Phone size={16} />
                 <span>(463) 245-6061</span>
               </div>
-  
+
               <button
                 onClick={onOpenChat}
-                className="flex items-center gap-2 mt-3"
+                className="flex items-center gap-2"
               >
                 <MessageCircle size={16} />
                 <span>Chat</span>

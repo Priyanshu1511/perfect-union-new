@@ -73,7 +73,7 @@ function App() {
   onOpenChat={() => setChatOpen(true)}
 />
 
-      <main className="flex-grow pt-[100px]">
+      <main className="flex-grow pt-16 md:pt-28">
         {renderPage()}
       </main>
 
