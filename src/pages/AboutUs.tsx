@@ -105,7 +105,7 @@ export default function AboutUs() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">
+              <h2 className="text-4xl font-serif font-bold text-brand mb-6">
                 Our Story
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
@@ -140,7 +140,7 @@ Wherever the road takes you, we’ll be right there with you.
 
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl font-serif font-bold text-brand mb-6">
             Our Mission
           </h2>
           <p className="text-xl text-slate-600 max-w-5xl mx-auto">
@@ -152,7 +152,7 @@ Wherever the road takes you, we’ll be right there with you.
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">
+            <h2 className="text-4xl font-serif font-bold text-brand mb-6">
               Our Core Values
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -170,7 +170,7 @@ Wherever the road takes you, we’ll be right there with you.
                 <div className="inline-flex items-center justify-center w-20 h-20 mb-6 text-slate-900">
                   <value.icon size={48} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                <h3 className="text-2xl font-bold text-brand mb-4">
                   {value.title}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">

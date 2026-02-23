@@ -77,7 +77,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand mb-6">
             Your Trusted Partner in Trucking Insurance
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -91,7 +91,7 @@ export default function Home({ onNavigate }: HomeProps) {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand mb-6">
               Comprehensive Coverage Solutions
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
@@ -105,10 +105,10 @@ export default function Home({ onNavigate }: HomeProps) {
                 key={index}
                 className="bg-white p-8 hover:shadow-xl transition-all duration-300 group cursor-pointer"
               >
-                <div className="mb-6 text-slate-900 group-hover:text-slate-700 transition-colors duration-300">
+                <div className="mb-6 text-brand group-hover:text-slate-700 transition-colors duration-300">
                   <service.icon size={48} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">
+                <h3 className="text-xl font-bold text-brand mb-4">
                   {service.title}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
