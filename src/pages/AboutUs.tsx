@@ -128,7 +128,7 @@ Wherever the road takes you, we’ll be right there with you.
             </div>
             <div className="bg-gray-100 h-96 flex items-center justify-center">
               <img src=
-        "https://raw.githubusercontent.com/Priyanshu1511/perfect-union-new/refs/heads/main/aboutus2.jpeg"
+        "https://raw.githubusercontent.com/Priyanshu1511/perfect-union-new/refs/heads/main/src/pages/About4.jpg"
                
                 alt="Commercial trucks"
                 className="w-full h-full object-cover"
