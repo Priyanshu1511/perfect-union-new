@@ -144,7 +144,7 @@ export default function OurProducts({ selectedProduct , onNavigate  }: OurProduc
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">
+            <h2 className="text-4xl font-serif font-bold text-brand mb-6">
               Complete Protection for Your Business
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -166,7 +166,7 @@ export default function OurProducts({ selectedProduct , onNavigate  }: OurProduc
                     <product.icon size={56} strokeWidth={1.5} />
                   </div>
 
-                  <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                  <h3 className="text-3xl font-bold text-brand mb-4">
                     {product.title}
                   </h3>
 
@@ -210,7 +210,7 @@ export default function OurProducts({ selectedProduct , onNavigate  }: OurProduc
       {/* CTA SECTION */}
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-serif font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl font-serif font-bold text-brand mb-6">
             Custom Coverage Solutions
           </h2>
           <p className="text-xl text-slate-600 mb-10 leading-relaxed">
