@@ -81,14 +81,14 @@ export default function Navigation({
 
           {/* DESKTOP CONTACT */}
           <div className="hidden xl:flex items-center gap-8 text-sm font-medium text-slate-700">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-brand">
               <Phone size={16} />
               <span>(463) 245-6061</span>
             </div>
 
             <button
               onClick={onOpenChat}
-              className="flex items-center gap-2 hover:text-black transition"
+              className="flex items-center gap-2 text-brand hover:text-black transition"
             >
               <MessageCircle size={16} />
               <span>Chat</span>
