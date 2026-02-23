@@ -464,8 +464,8 @@ export default function ContactUs() {
                       <h3 className="text-lg font-bold text-slate-900 mb-1">Address</h3>
                       <p className="text-slate-600">
                         Perfect Uninon Insurance Agency LLC<br />
-                        821 Commerce Drive<br />
-                        Whiteland, IN 46148
+                        821 Milbrodt dr<br />
+                        Whiteland, IN 46184
                       </p>
                     </div>
                   </div>

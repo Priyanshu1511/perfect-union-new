@@ -119,8 +119,8 @@ export default function Footer({ onNavigate }: FooterProps) {
       <MapPin size={16} className="mt-1 shrink-0" />
       <span>
         Perfect Union Insurance Agency LLC<br />
-        821 Commerce Drive<br />
-        Whiteland, IN 46148
+        821 Milbrodt Dr<br />
+        Whiteland, IN 46184
       </span>
     </li>
             </ul>
