@@ -339,7 +339,7 @@ export default function ContactUs() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">
+              <h2 className="text-3xl font-serif font-bold text-brand mb-6">
                 Request a Quote
               </h2>
               <p className="text-lg text-slate-600 mb-8">
@@ -429,7 +429,7 @@ export default function ContactUs() {
 
             <div className="space-y-12">
               <div>
-                <h2 className="text-3xl font-serif font-bold text-slate-900 mb-8">
+                <h2 className="text-3xl font-serif font-bold text-brand mb-8">
                   Contact Information
                 </h2>
 
@@ -447,10 +447,10 @@ export default function ContactUs() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <Mail size={24} className="text-slate-900" />
+                      <Mail size={24} className="text-brand" />
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-bold text-slate-900 mb-1">Email</h3>
+                      <h3 className="text-lg font-bold text-brand mb-1">Email</h3>
                       <p className="text-slate-600">contact@perfectrunionins.com</p>
                   
                     </div>
@@ -458,7 +458,7 @@ export default function ContactUs() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <MapPin size={24} className="text-slate-900" />
+                      <MapPin size={24} className="text-brand" />
                     </div>
                     <div className="ml-4">
                       <h3 className="text-lg font-bold text-slate-900 mb-1">Address</h3>
