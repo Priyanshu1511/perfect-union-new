@@ -114,7 +114,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>📞 (463) 245-6061</li>
-              <li>✉️ contact@perfectrunionins.com</li>
+              <li>✉️ contact@perfectunionins.com</li>
               <li className="flex items-start gap-2">
       <MapPin size={16} className="mt-1 shrink-0" />
       <span>
