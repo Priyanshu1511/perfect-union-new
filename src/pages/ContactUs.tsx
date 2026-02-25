@@ -451,7 +451,7 @@ export default function ContactUs() {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-lg font-bold text-brand mb-1">Email</h3>
-                      <p className="text-slate-600">contact@perfectrunionins.com</p>
+                      <p className="text-slate-600">contact@perfectunionins.com</p>
                   
                     </div>
                   </div>
